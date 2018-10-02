@@ -1,5 +1,8 @@
 # Data Preprocessing 
 
+# set the working directory 
+setwd("~/Documents/GitHub/MachineLearning_R/MachineLearningR/DataPreprocessing")
+
 # Import the dataset 
 dataset <- read.csv("Data.csv")
 
