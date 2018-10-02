@@ -18,9 +18,10 @@ print(salary_distance)
 # --> we see the salary distance is way bigger - the salary distance dominates 
 # --- example is over
 
-training_set <- scale(training_set) # error message
+# error message
 # training_set <- scale(training_set) - "Country" & "Purchased" is a factor
-test_set <- scale(test_set)
+training_set[,2:3] <- scale(training_set[,2:3])
+test_set[,2:3] <- scale(test_set[,2:3])
 
 
 
