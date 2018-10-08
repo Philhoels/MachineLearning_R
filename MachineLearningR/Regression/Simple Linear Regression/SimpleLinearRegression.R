@@ -27,4 +27,29 @@ summary(regressor)
 # predict the test set result
 y_pred <- predict(regressor, test_set)
 
+# Visulasing the training set result
+library(ggplot2)
+
+# Training set
+ggplot() + 
+  geom_point(aes(x = training_set$YearsExperience, y = training_set$Salary),
+             color = "red") + 
+  geom_line(aes(x = training_set$YearsExperience, y = predict(regressor, training_set)),
+            color = "blue") +
+  ggtitle("Salary vs experience (Training set)") +
+  xlab("Years of experience") +
+  ylab("Salary")
+
+
+# Visulasing the test set result
+# Test set
+ggplot() + 
+  geom_point(aes(x = test_set$YearsExperience, y = test_set$Salary),
+             color = "red") + 
+  geom_line(aes(x = training_set$YearsExperience, y = predict(regressor, training_set)),
+            color = "blue") +
+  ggtitle("Salary vs experience (Test set)") +
+  xlab("Years of experience") +
+  ylab("Salary")
+
 
