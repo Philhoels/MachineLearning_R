@@ -30,6 +30,7 @@ y_pred <- predict(regressor, test_set)
 # Visulasing the training set result
 library(ggplot2)
 
+# Visulasing
 # Training set
 ggplot() + 
   geom_point(aes(x = training_set$YearsExperience, y = training_set$Salary),
